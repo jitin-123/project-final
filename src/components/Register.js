@@ -6,7 +6,7 @@ export default class Register extends Component {
     users:[]
   }
   componentDidMount(){
-    axios.get("https://backendapi-vecc.onrender.com/users")
+    axios.get("http://13.233.165.157:4000/users")
       .then((res)=>{
         console.log(res.data)
         this.setState({

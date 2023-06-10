@@ -12,9 +12,11 @@ export default class Login extends Component {
     })
   }
   send=()=>{
-    axios.post("https://backendapi-vecc.onrender.com/store",{username:this.state.username,password:this.state.password})
+    axios.post("http://13.233.165.157:4000/store",{username:this.state.username,password:this.state.password})
         .then((res)=>{
             console.log(res)
+            if(res.status===200)
+              alert("Data added successfully")
         })
     // fetch("https://backend-bbcw.onrender.com/add",{
     //     method:"POST",
